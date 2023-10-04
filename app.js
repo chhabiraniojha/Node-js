@@ -5,8 +5,7 @@ const fs=require("fs");
 const server=http.createServer((req,res)=>{
     const url=req.url;
     const method=req.method;
-    var message
-    var messages="hiiiiiiii"
+    
    if(url==="/"){
     // Use fs.readFile() method to read the file
     fs.readFile   ('message.txt', {encoding:'utf8'},(err, data)=>{
@@ -44,6 +43,8 @@ const server=http.createServer((req,res)=>{
         return res.end();
      })
      }
+
+     
 
 });
 server.listen(4000);
